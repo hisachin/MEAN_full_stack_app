@@ -1,0 +1,84 @@
+<div class="registrationform-container">
+  <div class="h-100 row align-items-center">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Register</h4>
+          <form class="forms-sample" [formGroup]="registrationForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Name" formControlName="name">
+              <div
+                *ngIf="f.name.touched && f.name.invalid"
+                class="alert alert-danger"
+              >
+                <div *ngIf="f.name.errors.required">
+                  Field is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+              <div
+                *ngIf="f.email.touched && f.email.invalid"
+                class="alert alert-danger"
+              >
+                <div *ngIf="f.email.errors.required">
+                  Field is required.
+                </div>
+                <div *ngIf="f.email.errors.email">
+                  Please Enter Correct Email
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile Number</label>
+              <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile No" formControlName="mobile">
+              <div
+                *ngIf="f.mobile.touched && f.mobile.invalid"
+                class="alert alert-danger"
+              >
+                <div *ngIf="f.mobile.errors.required">
+                  Field is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+              <div
+                *ngIf="f.password.touched && f.password.invalid"
+                class="alert alert-danger"
+              >
+                <div *ngIf="f.password.errors.required">
+                  Field is required
+                </div>
+                <div *ngIf="f.password.errors.pattern">
+                  Password must include at least an uppercase, a number & a special character
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Confirm Password</label>
+              <input type="confirmPassword" class="form-control" id="confirmPassword" placeholder="Re-enter Password" formControlName="confirmPassword">
+              <div
+                *ngIf="f.confirmPassword.touched && f.confirmPassword.invalid"
+                class="alert alert-danger"
+              >
+                <div *ngIf="f.confirmPassword.errors.required">
+                  Field is required.
+                </div>
+                <div *ngIf="f.confirmPassword.errors.mustMatch">
+                  Password must be matched.
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-success mr-2" [disabled]="!registrationForm.valid" (click)="register()">Submit</button>
+            <button  type="reset" class="btn btn-light">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
