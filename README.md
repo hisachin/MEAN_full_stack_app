@@ -15,7 +15,7 @@ To work on this project, first you have to run the `npm install`, it will instal
 
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:3010/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:5000/`. The app will automatically reload if you change any of the source files.
 
 ## Running unit tests for frontend
 
