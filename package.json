@@ -35,7 +35,7 @@
     "font-awesome": "^4.7.0",
     "generate-password": "^1.5.1",
     "mdi": "^2.2.43",
-    "mongoose": "^5.9.7",
+    "mongoose": "^5.13.15",
     "ng-bootstrap": "^1.6.3",
     "nodemon": "^2.0.2",
     "path": "^0.12.7",
